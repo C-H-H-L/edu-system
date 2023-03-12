@@ -1,32 +1,15 @@
 <template>
   <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <!-- 根路由出口 -->
+    <router-view />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  /*有的时候你想要向 webpack 的预处理器 loader 传递选项。
+  你可以使用 vue.config.js 中的 css.loaderOptions 选项。
+  比如你可以这样向所有 scss 样式传入共享的全局变量,
+  这样就不需要在每个文件中引入所需要的scss文件了
+  @import '~@/styles/variables.scss';*/
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
